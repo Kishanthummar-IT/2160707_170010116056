@@ -3,10 +3,10 @@ import java.io.*;
 import java.util.*;
 
 class TcpServer{
-     public static void Main(String[] args) {
+     public static void main(String[] args) {
         
          try {
-            ServerSocket serversocket = new ServerSocket(2000);
+            ServerSocket socket = new ServerSocket(2000);
             System.out.println("**Server is start on 2000**");
             Socket socket = serversocket.accept();
              
@@ -34,7 +34,7 @@ class TcpServer{
             else if (ch[i] >= 'A' && ch[i] <= 'Z')  
                 ch[i] = (char)(ch[i] + 'a' - 'A');             
         } 
-        String str = new String(ch); 
-        return str; 
+        String st = new String(ch); 
+        return st; 
     }
 }
